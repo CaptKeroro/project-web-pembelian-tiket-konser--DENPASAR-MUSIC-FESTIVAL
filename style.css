@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #923131;
+  color: #ffffff;
+}
+
+header {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo img {
+  width: 150px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav li {
+  margin-right: 20px;
+}
+
+header nav li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header nav li a:hover {
+  color: #ff9f00;
+}
+
+main {
+  padding: 2rem;
+}
+
+#home {
+  text-align: center;
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 4rem 0;
+}
+
+#home h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#home p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#home .button a {
+  display: inline-block;
+  background-color: #ff9f00;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+#home .button a:hover {
+  background-color: #ff9f00;
+}
+
+#lineup {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+#lineup h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.artists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1rem;
+}
+
+.card {
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.card p {
+  font-size: 1.2rem;
+  color: #ff9f00;
+  font-weight: 1000;
+}
+
+#tickets {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+#tickets h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.prices {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+table th {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+table td {
+  text-align: center;
+}
+
+table td button {
+  background-color: #ff9f00;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+table td button:hover {
+  background-color: #f7941e;
+}
+
+#about {
+  padding: 2rem 0;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#about p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#contact {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form label,
+form input,
+form textarea,
+form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+form label {
+  text-align: left;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  padding: 0.5rem;
+}
+
+form button {
+  background-color: #ff9f00;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #f7941e;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+footer p {
+  font-size: 1rem;
+}

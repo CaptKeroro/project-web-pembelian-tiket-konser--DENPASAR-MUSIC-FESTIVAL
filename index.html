@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DENPASAR MUSIC FESTIVAL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Membuat header website -->
+  <header>
+    <!-- Membuat logo website -->
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo Denpasar Music Festival">
+    </div>
+    <!-- Membuat menu navigasi website -->
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#lineup">Lineup</a></li>
+        <li><a href="#tickets">Tickets</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Membuat bagian utama website -->
+  <main>
+    <!-- Membuat bagian home website -->
+    <section id="home">
+      <!-- Membuat judul dan tagline festival -->
+      <div class="intro">
+        <h1>Denpasar Music Festival</h1>
+        <p>Where Music Meets Paradise</p>
+      </div>
+      <!-- Membuat tombol beli tiket -->
+      <div class="button">
+        <a href="#tickets">Buy Tickets</a>
+      </div>
+    </section>
+    <!-- Membuat bagian lineup website -->
+    <section id="lineup">
+      <!-- Membuat judul bagian lineup -->
+      <h2>Lineup</h2>
+      <!-- Membuat daftar artis yang akan tampil -->
+      <div class="artists">
+        <!-- Membuat kartu untuk setiap artis -->
+        <div class="card">
+          <!-- Membuat gambar artis -->
+          <img src="images/artist/sheilaon7.jpg" alt="Artist 1">
+          <!-- Membuat nama artis -->
+          <h3>Sheila on 7</h3>
+          <!-- Membuat genre musik artis -->
+          <p>Pop</p>
+        </div>
+        <!-- Mengulangi proses yang sama untuk artis lainnya -->
+        <div class="card">
+          <img src="images/artist/payungteduh.jpg" alt="Artist 2">
+          <h3>Payung Teduh</h3>
+          <p>Pop Indie</p>
+        </div>
+        <div class="card">
+          <img src="images/artist/feast.jpg" alt="Artist 3">
+          <h3>.Feast</h3>
+          <p>Rock Indie</p>
+        </div>
+      </div>
+    </section>
+    <!-- Membuat bagian tickets website -->
+    <section id="tickets">
+      <!-- Membuat judul bagian tickets -->
+      <h2>Tickets</h2>
+      <!-- Membuat daftar harga tiket -->
+      <div class="prices">
+        <!-- Membuat tabel untuk menampilkan harga tiket -->
+        <table>
+          <!-- Membuat baris pertama tabel untuk menampilkan jenis tiket -->
+          <tr>
+            <th>Ticket Type</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
+          <!-- Membuat baris kedua tabel untuk menampilkan harga tiket reguler -->
+          <tr>
+            <td>Regular</td>
+            <td>Rp. 500.000,-</td>
+            <!-- Membuat tombol beli tiket reguler dengan fungsi JavaScript -->
+            <td><button onclick="buyTicket('Regular')">Buy</button></td>
+          </tr>
+          <!-- Membuat baris ketiga tabel untuk menampilkan harga tiket VIP -->
+          <tr>
+            <td>VIP</td>
+            <td>Rp. 1.000.000,-</td>
+            <!-- Membuat tombol beli tiket VIP dengan fungsi JavaScript -->
+            <td><button onclick="buyTicket('VIP')">Buy</button></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <!-- Membuat bagian about website -->
+    <section id="about">
+      <!-- Membuat judul bagian about -->
+      <h2>About</h2>
+      <!-- Membuat paragraf deskripsi festival -->
+      <p>Denpasar Music Festival is a one-day music festival that celebrates the diversity and richness of Indonesian
+        music. The festival features various genres of music, from rock, pop, indie, to traditional music. The festival
+        also showcases the beauty and culture of Bali, the island of gods. Come and join us for an unforgettable musical
+        journey in paradise.</p>
+    </section>
+    <!-- Membuat bagian contact website -->
+    <section id="contact">
+      <!-- Membuat judul bagian contact -->
+      <h2>Contact</h2>
+      <!-- Membuat formulir kontak -->
+      <form>
+        <!-- Membuat label dan input untuk nama -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <!-- Membuat label dan input untuk email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <!-- Membuat label dan textarea untuk pesan -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <!-- Membuat tombol kirim pesan dengan fungsi JavaScript -->
+        <button type="submit" onclick="sendMessage()">Send</button>
+      </form>
+    </section>
+  </main>
+  <!-- Membuat footer website -->
+  <footer>
+    <!-- Membuat teks hak cipta website -->
+    <p>© 2023 by Denpasar Music Festival. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
