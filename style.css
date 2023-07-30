@@ -13,6 +13,7 @@ body {
 }
 
 header {
+  height: 70px;
   background-color: #1a1a1a;
   color: #fff;
   padding: 1rem;
@@ -22,12 +23,13 @@ header {
 }
 
 header .logo img {
-  width: 150px;
+  width: 75px;
 }
 
 header nav ul {
   list-style: none;
   display: flex;
+  gap: 15px;
 }
 
 header nav li {
@@ -241,4 +243,5 @@ footer {
 
 footer p {
   font-size: 1rem;
+  padding: 10px;
 }
