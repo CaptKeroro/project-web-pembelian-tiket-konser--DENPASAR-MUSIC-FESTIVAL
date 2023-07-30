@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,21 +7,29 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Geologica', sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  background-color: #923131;
+  background-color: #6e0e0e;
   color: #ffffff;
 }
 
 header {
-  height: 70px;
+  height: 80px;
   background-color: #1a1a1a;
   color: #fff;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 
 header .logo img {
@@ -29,7 +39,7 @@ header .logo img {
 header nav ul {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 header nav li {
@@ -40,6 +50,7 @@ header nav li a {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s;
+  font-weight: bold;
 }
 
 header nav li a:hover {
@@ -55,8 +66,10 @@ main {
   background-image: url('images/background.jpg');
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: #ffffff;
   padding: 4rem 0;
+  font-family: 'Geologica', sans-serif;
+  border-radius: 12px;
 }
 
 #home h1 {
@@ -77,6 +90,7 @@ main {
   text-decoration: none;
   border-radius: 4px;
   transition: background-color 0.3s;
+  font-weight: 1000;
 }
 
 #home .button a:hover {
@@ -236,7 +250,7 @@ form button:hover {
 
 footer {
   text-align: center;
-  background-color: #333;
+  background-color: #1a1a1a;
   color: #fff;
   padding: 1rem;
 }
