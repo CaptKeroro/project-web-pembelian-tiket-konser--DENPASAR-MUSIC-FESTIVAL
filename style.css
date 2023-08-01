@@ -11,13 +11,13 @@ body {
   font-size: 16px;
   line-height: 1.6;
   background-color: #6e0e0e;
-  color: #ffffff;
+  color: #f0f0f0;
 }
 
 header {
   height: 80px;
   background-color: #1a1a1a;
-  color: #fff;
+  color: #f0f0f0;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -33,7 +33,7 @@ header.sticky {
 }
 
 header .logo img {
-  width: 75px;
+  width: 85px;
 }
 
 header nav ul {
@@ -47,7 +47,7 @@ header nav li {
 }
 
 header nav li a {
-  color: #fff;
+  color: #f0f0f0;
   text-decoration: none;
   transition: color 0.3s;
   font-weight: bold;
@@ -62,11 +62,12 @@ main {
 }
 
 #home {
+  margin-top: 80px;
   text-align: center;
   background-image: url('images/background.jpg');
   background-size: cover;
   background-position: center;
-  color: #ffffff;
+  color: #f0f0f0;
   padding: 4rem 0;
   font-family: 'Geologica', sans-serif;
   border-radius: 12px;
@@ -85,7 +86,7 @@ main {
 #home .button a {
   display: inline-block;
   background-color: #ff9f00;
-  color: #fff;
+  color: #f0f0f0;
   padding: 1rem 2rem;
   text-decoration: none;
   border-radius: 4px;
@@ -129,7 +130,7 @@ main {
 .card h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #fff;
+  color: #f0f0f0;
 }
 
 .card p {
@@ -174,7 +175,7 @@ table td {
 
 table td button {
   background-color: #ff9f00;
-  color: #fff;
+  color: #f0f0f0;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 4px;
@@ -237,7 +238,7 @@ form textarea {
 
 form button {
   background-color: #ff9f00;
-  color: #fff;
+  color: #f0f0f0;
   padding: 1rem 2rem;
   border: none;
   border-radius: 4px;
@@ -251,7 +252,7 @@ form button:hover {
 footer {
   text-align: center;
   background-color: #1a1a1a;
-  color: #fff;
+  color: #f0f0f0;
   padding: 1rem;
 }
 
