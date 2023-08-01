@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Geologica', sans-serif;
   font-size: 16px;
@@ -22,6 +26,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: top 0.3s ease;
 }
 
 header.sticky {
