@@ -262,7 +262,7 @@ form button:hover {
 .footer {
   position: relative;
   width: 100%;
-  background: url("images/logofooter.png") no-repeat center;
+  background: url("images/gambarfooter.png") no-repeat center;
   background-size: cover;
   min-height: 100px;
   padding: 20px 50px;
