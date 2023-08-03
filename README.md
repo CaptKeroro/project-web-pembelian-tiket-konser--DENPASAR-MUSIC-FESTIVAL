@@ -10,7 +10,7 @@ Ini adalah project website untuk pembelian tiket konser Denpasar Music Festival.
 
 ## Deskripsi Project
 
-Denpasar Music Festival adalah project website yang memungkinkan pengguna untuk membeli tiket konser acara musik Denpasar Music Festival. project ini bertujuan untuk memberikan kemudahan bagi para penggemar musik untuk mendapatkan tiket konser dengan cepat dan mudah. Di dalam website, pengguna dapat melihat lineup artis yang akan tampil, harga tiket, dan melakukan pembelian tiket secara online.
+Denpasar Music Festival adalah proyek website yang memungkinkan pengguna untuk membeli tiket konser acara musik Denpasar Music Festival. Proyek ini bertujuan untuk memberikan kemudahan bagi para penggemar musik untuk mendapatkan tiket konser dengan cepat dan mudah. Di dalam website, pengguna dapat melihat lineup artis yang akan tampil, harga tiket, dan melakukan pembelian tiket secara online.
 
 ## Cara Menjalankan Project
 
@@ -20,4 +20,4 @@ Denpasar Music Festival adalah project website yang memungkinkan pengguna untuk 
 
 ## Prasyarat
 
-Tidak ada prasyarat khusus yang diperlukan untuk menjalankan project ini. project ini sepenuhnya berbasis pada teknologi web standar (HTML, CSS, dan JavaScript).
+Tidak ada prasyarat khusus yang diperlukan untuk menjalankan proyek ini. Proyek ini sepenuhnya berbasis pada teknologi web standar (HTML, CSS, dan JavaScript).
