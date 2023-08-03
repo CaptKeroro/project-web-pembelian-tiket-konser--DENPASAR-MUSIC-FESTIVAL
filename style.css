@@ -284,18 +284,17 @@ form button:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 0; /* Atur z-index agar konten footer tampil di atas gambar latar */
+  z-index: 0;
 }
 
 .footer::before {
-  /* Ini adalah pseudo-element untuk membuat lapisan overlay transparan */
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(26, 26, 26, 0.6); /* Ubah nilai opasitas sesuai kebutuhan */
+  background-color: rgba(26, 26, 26, 0.6);
   z-index: -1;
 }
 
