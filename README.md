@@ -2,17 +2,17 @@
 
 ![Denpasar Music Festival Logo](images/logofestival.png)
 
-Ini adalah proyek website untuk pembelian tiket konser Denpasar Music Festival. Proyek ini dibuat sebagai tugas dari UKM Progress ITB STIKOM BALI.
+Ini adalah project website untuk pembelian tiket konser Denpasar Music Festival. Project ini dibuat sebagai tugas dari UKM Progress ITB STIKOM BALI.
 
 ## Anggota Tim
 
 - I Putu Eka Surya Gempita (220030429)
 
-## Deskripsi Proyek
+## Deskripsi Project
 
-Denpasar Music Festival adalah proyek website yang memungkinkan pengguna untuk membeli tiket konser acara musik Denpasar Music Festival. Proyek ini bertujuan untuk memberikan kemudahan bagi para penggemar musik untuk mendapatkan tiket konser dengan cepat dan mudah. Di dalam website, pengguna dapat melihat lineup artis yang akan tampil, harga tiket, dan melakukan pembelian tiket secara online.
+Denpasar Music Festival adalah project website yang memungkinkan pengguna untuk membeli tiket konser acara musik Denpasar Music Festival. project ini bertujuan untuk memberikan kemudahan bagi para penggemar musik untuk mendapatkan tiket konser dengan cepat dan mudah. Di dalam website, pengguna dapat melihat lineup artis yang akan tampil, harga tiket, dan melakukan pembelian tiket secara online.
 
-## Cara Menjalankan Proyek
+## Cara Menjalankan Project
 
 1. Pastikan Anda memiliki peramban (browser) web yang terbaru di perangkat Anda.
 2. Buka file `index.html` di peramban web Anda.
@@ -20,4 +20,4 @@ Denpasar Music Festival adalah proyek website yang memungkinkan pengguna untuk m
 
 ## Prasyarat
 
-Tidak ada prasyarat khusus yang diperlukan untuk menjalankan proyek ini. Proyek ini sepenuhnya berbasis pada teknologi web standar (HTML, CSS, dan JavaScript).
+Tidak ada prasyarat khusus yang diperlukan untuk menjalankan project ini. project ini sepenuhnya berbasis pada teknologi web standar (HTML, CSS, dan JavaScript).
