@@ -1,3 +1,12 @@
+const esmScript = document.createElement('script');
+esmScript.type = 'module';
+esmScript.src = 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js';
+document.body.appendChild(esmScript);
+
+const nomoduleScript = document.createElement('script');
+nomoduleScript.src = 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js';
+document.body.appendChild(nomoduleScript);
+
 let prevScrollPos = window.pageYOffset;
 let isHeaderVisible = true;
 const headerHeight = document.querySelector("header").offsetHeight;
