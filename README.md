@@ -21,9 +21,3 @@ Denpasar Music Festival adalah project website yang memungkinkan pengguna untuk 
 ## Prasyarat
 
 Tidak ada prasyarat khusus yang diperlukan untuk menjalankan project ini. Project ini sepenuhnya berbasis pada teknologi web standar (HTML, CSS, dan JavaScript).
-
-## Tampilan Aplikasi
-![tampilan home](ApplicationScreenshots/home.png)
-![tampilan lineup](ApplicationScreenshots/lineup.png)
-![tampilan tikects dan about](ApplicationScreenshots/tiketabout.png)
-![tampilan contact dan footer](ApplicationScreenshots/contactfooter.png)
