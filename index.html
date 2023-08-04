@@ -1,350 +1,168 @@
-@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@800&display=swap");
+<!DOCTYPE html>
+<html lang="en">
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DENPASAR MUSIC FESTIVAL</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="main.js"></script>
+</head>
 
-html {
-  scroll-behavior: smooth;
-}
+<body>
+  <header class="sticky">
+    <div class="logo">
+      <img src="images/logofestival.png" alt="Logo Denpasar Music Festival">
+    </div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#lineup">Lineup</a></li>
+        <li><a href="#tickets">Tickets</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home">
+      <div class="intro">
+        <h1>Denpasar Music Festival</h1>
+        <p>Where Music Meets Paradise</p>
+      </div>
+      <div class="button">
+        <a href="#tickets">Buy Tickets</a>
+      </div>
+    </section>
+    <section id="lineup">
+      <h2>Lineup</h2>
+      <div class="artists">
+        <div class="card">
+          <img src="images/artist/sheilaon7.jpg" alt="Artist 1">
+          <h3>Sheila on 7</h3>
+          <p>Pop</p>
+        </div>
+        <div class="card">
+          <img src="images/artist/payungteduh.jpg" alt="Artist 2">
+          <h3>Payung Teduh</h3>
+          <p>Pop Indie</p>
+        </div>
+        <div class="card">
+          <img src="images/artist/feast.jpg" alt="Artist 3">
+          <h3>.Feast</h3>
+          <p>Rock Indie</p>
+        </div>
+        <div class="card">
+          <img src="images/artist/stereowall.jpg" alt="Artist 4">
+          <h3>Stereo Wall</h3>
+          <p>alternative rock</p>
+        </div>
+        <div class="card">
+          <img src="images/artist/forrevenge.jpg" alt="Artist 5">
+          <h3>For Revenge</h3>
+          <p>alternative rock</p>
+        </div>
+        <div class="card">
+          <img src="images/artist/nadin.jpg" alt="Artist 6">
+          <h3>Nadin Amizah</h3>
+          <p>pop</p>
+        </div>
+        <div class="card">
+          <img src="images/artist/gheaindrawari.jpg" alt="Artist 7">
+          <h3>Ghea Indrawari</h3>
+          <p>pop</p>
+        </div>
+        <div class="card">
+          <img src="images/artist/jkt48.jpg" alt="Artist 8">
+          <h3>JKT48</h3>
+          <p>pop</p>
+        </div>
+        <div class="card">
+          <img src="images/artist/rocketrockers.jpg" alt="Artist 9">
+          <h3>Rocket Rockers</h3>
+          <p>Rock</p>
+        </div>
+        <div class="card">
+          <img src="images/artist/hindia.jpg" alt="Artist 10">
+          <h3>Hindia</h3>
+          <p>Indie</p>
+        </div>
+        <div class="card">
+          <img src="images/artist/kpr.jpg" alt="Artist 11">
+          <h3>Kelompok Penerbang Rocket</h3>
+          <p>Rock</p>
+        </div>
+        <div class="card">
+          <img src="images/artist/SID.jpg" alt="Artist 12">
+          <h3>Superman Is Dead</h3>
+          <p>Rock</p>
+        </div>
+      </div>
+    </section>
+    <section id="tickets">
+      <h2>Tickets</h2>
+      <div class="prices">
+        <table>
+          <thead>
+            <tr>
+              <th>Ticket Type</th>
+              <th>Price</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Regular</td>
+              <td>Rp. 500.000,-</td>
+              <td><button>Buy</button></td>
+            </tr>
+            <tr>
+              <td>VIP</td>
+              <td>Rp. 1.000.000,-</td>
+              <td><button>Buy</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section id="about">
+      <h2>About</h2>
+      <p>Denpasar Music Festival is a one-day music festival that celebrates the diversity and richness of Indonesian
+        music. The festival features various genres of music, from rock, pop, indie, to traditional music. The festival
+        also showcases the beauty and culture of Bali, the island of gods. Come and join us for an unforgettable musical
+        journey in paradise.</p>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <p>&copy; 2023 by Denpasar Music Festival. All rights reserved.</p>
+    <p>Jl. Raya Puputan No.142, Panjer, Denpasar Selatan, Kota Denpasar, Bali 80234</p>
+  </footer>
+</body>
 
-body {
-  font-family: "Geologica", sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  background-color: #6e0e0e;
-  color: #f0f0f0;
-}
-
-header {
-  height: 80px;
-  background-color: #1a1a1a;
-  color: #f0f0f0;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: top 0.3s ease;
-}
-
-header.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-}
-
-header .logo img {
-  width: 85px;
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-header nav li {
-  margin-right: 20px;
-}
-
-header nav li a {
-  color: #f0f0f0;
-  text-decoration: none;
-  transition: color 0.3s;
-  font-weight: bold;
-}
-
-header nav li a:hover {
-  color: #ff9f00;
-}
-
-main {
-  padding: 2rem;
-}
-
-#home {
-  margin-top: 80px;
-  text-align: center;
-  background-image: url("images/background.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #f0f0f0;
-  padding: 4rem 0;
-  font-family: "Geologica", sans-serif;
-  border-radius: 12px;
-  border: 2px solid #6e0e0e;
-  box-shadow: 10px 20px 50px rgba(0, 0, 0, 10);
-}
-
-#home h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-#home p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-#home .button a {
-  display: inline-block;
-  background-color: #ff9f00;
-  color: #f0f0f0;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-  font-weight: 1000;
-}
-
-#home .button a:hover {
-  background-color: #ff9f00;
-}
-
-#lineup {
-  text-align: center;
-  padding: 2rem 0;
-}
-
-#lineup h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.artists {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 4rem;
-}
-
-.card {
-  background-color: #1a1a1a;
-  padding: 1.5rem;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 8px;
-  border: 2px solid #6e0e0e;
-  margin-bottom: 1rem;
-  /* box-shadow: 10px 20px 50px rgba( 0, 0, 0, 10); */
-}
-
-.card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #f0f0f0;
-}
-
-.card p {
-  font-size: 1.2rem;
-  color: #ff9f00;
-  font-weight: 1000;
-}
-
-#tickets {
-  text-align: center;
-  padding: 2rem 0;
-}
-
-#tickets h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-#tickets button {
-  font-family: "Geologica", sans-serif;
-}
-
-.prices {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-table th,
-table td {
-  padding: 1rem;
-  border-bottom: 1px solid #ccc;
-}
-
-table th {
-  background-color: #f5f5f5;
-  color: #333;
-}
-
-table td {
-  text-align: center;
-}
-
-table td button {
-  background-color: #ff9f00;
-  color: #f0f0f0;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-table td button:hover {
-  background-color: #f7941e;
-}
-
-#about {
-  padding: 2rem 0;
-}
-
-#about h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-#about p {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-#contact {
-  text-align: center;
-  padding: 2rem 0;
-}
-
-#contact h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-#contact button {
-  background-color: #ff9f00;
-  color: #f0f0f0;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: "Geologica", sans-serif;
-}
-
-form {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-form label,
-form input,
-form textarea,
-form button {
-  display: block;
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-form label {
-  text-align: left;
-  font-weight: bold;
-}
-
-form input,
-form textarea {
-  padding: 0.5rem;
-}
-
-form button {
-  background-color: #ff9f00;
-  color: #f0f0f0;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #f7941e;
-}
-
-.footer {
-  position: relative;
-  width: 100%;
-  background: url("images/gambarfooter.png") no-repeat center;
-  background-size: cover;
-  min-height: 100px;
-  padding: 20px 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 0;
-}
-
-.footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(26, 26, 26, 0.6);
-  z-index: -1;
-}
-
-.social-icon,
-.menu {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-  flex-wrap: wrap;
-}
-
-.social-icon__item,
-.menu__item {
-  list-style: none;
-}
-
-.social-icon__link {
-  font-size: 2rem;
-  color: #fff;
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.5s;
-}
-.social-icon__link:hover {
-  transform: translateY(-10px);
-}
-
-.menu__link {
-  font-size: 1.2rem;
-  color: #fff;
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.5s;
-  text-decoration: none;
-  opacity: 0.75;
-  font-weight: 300;
-}
-
-.menu__link:hover {
-  opacity: 1;
-}
-
-.footer p {
-  color: #fff;
-  margin: 15px 0 10px 0;
-  font-size: 1rem;
-  font-weight: 300;
-}
+</html>
