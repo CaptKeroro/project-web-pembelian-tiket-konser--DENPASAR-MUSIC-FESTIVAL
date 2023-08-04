@@ -58,7 +58,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     e.preventDefault();
 
     const target = document.querySelector(this.getAttribute("href"));
-    const headerOffset = headerHeight + 32; // Adjust this value according to your header height
+    const headerOffset = headerHeight + 17; // Adjust this value according to your header height
     const elementPosition = target.getBoundingClientRect().top;
     const offsetPosition = elementPosition - headerOffset;
 
