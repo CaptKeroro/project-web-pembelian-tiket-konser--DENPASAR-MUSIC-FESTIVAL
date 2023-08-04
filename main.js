@@ -8,18 +8,19 @@ nomoduleScript.src = 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js
 document.body.appendChild(nomoduleScript);
 
 let prevScrollPos = window.pageYOffset;
-let isHeaderVisible = true;
-const headerHeight = document.querySelector("header").offsetHeight;
+const header = document.querySelector("header");
+const headerHeight = header.offsetHeight;
 
 function toggleHeaderVisibility() {
   const currentScrollPos = window.pageYOffset;
+  const scrollUp = prevScrollPos > currentScrollPos;
 
-  if (prevScrollPos > currentScrollPos) {
-    // Scroll up
-    document.querySelector("header").style.top = "0";
+  if (scrollUp) {
+    // Scroll up, show the header
+    header.style.top = "0";
   } else {
-    // Scroll down
-    document.querySelector("header").style.top = `-${headerHeight}px`;
+    // Scroll down, hide the header
+    header.style.top = `-${headerHeight}px`;
   }
 
   prevScrollPos = currentScrollPos;
@@ -27,6 +28,7 @@ function toggleHeaderVisibility() {
 
 // Event listener to toggle header visibility on scroll
 window.addEventListener("scroll", toggleHeaderVisibility);
+
 
 // Function to show or hide the header
 function toggleHeader() {
