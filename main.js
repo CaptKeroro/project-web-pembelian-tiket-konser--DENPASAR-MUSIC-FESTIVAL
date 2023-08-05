@@ -41,8 +41,11 @@ document.addEventListener("click", function (event) {
   // Check if the clicked element is inside the header
   if (!header.contains(clickedElement)) {
     // Check if the clicked element is the buy or send button
-    if (clickedElement.id !== "buy" && clickedElement.id !== "submitBtn"
-      && clickedElement.id !== "name" && clickedElement.id !== "email"
+    if ( clickedElement.id !== "buy-regular"
+      && clickedElement.id !== "buy-vip"
+      && clickedElement.id !== "submitBtn"
+      && clickedElement.id !== "name"
+      && clickedElement.id !== "email"
       && clickedElement.id !== "message") {
       // Clicked element is not inside the header or the buttons, toggle header visibility
       toggleHeader();
