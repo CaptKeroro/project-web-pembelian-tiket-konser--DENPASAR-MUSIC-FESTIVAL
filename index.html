@@ -141,19 +141,19 @@
         music. The festival features various genres of music, from rock, pop, indie, to traditional music. The festival
         also showcases the beauty and culture of Bali, the island of gods. Come and join us for an unforgettable musical
         journey in paradise.</p>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <form action="sumbit_form.php" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-        <button id="send" type="submit">Send</button>
-      </form>
-    </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <form id="my-form" action="https://formspree.io/f/mdoravpj" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <button id="submitBtn" type="submit">Send</button>
+        </form>
+        <p id="my-form-status"></p>
+      </section>
   </main>
   <footer class="footer">
     <ul class="social-icon">

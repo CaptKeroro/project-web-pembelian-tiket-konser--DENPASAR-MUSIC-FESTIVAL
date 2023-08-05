@@ -5,8 +5,7 @@ let prevScrollPos = 0;
 
 // Function to show or hide the header
 function toggleHeader() {
-  // Check if the header is at the top (position fixed) and do nothing
-  if (window.pageYOffset === 0) return;
+  if (window.pageYOffset === 0) return; // Check if the header is at the top (position fixed) and do nothing
 
   if (isHeaderVisible) {
     // Header is visible, hide it
@@ -42,7 +41,7 @@ document.addEventListener("click", function (event) {
   // Check if the clicked element is inside the header
   if (!header.contains(clickedElement)) {
     // Check if the clicked element is the buy or send button
-    if (clickedElement.id !== "buy" && clickedElement.id !== "send"
+    if (clickedElement.id !== "buy" && clickedElement.id !== "submitBtn"
       && clickedElement.id !== "name" && clickedElement.id !== "email"
       && clickedElement.id !== "message") {
       // Clicked element is not inside the header or the buttons, toggle header visibility
@@ -74,26 +73,53 @@ homeLink.addEventListener("click", function (e) {
   scrollToHome();
 });
 
-// Event listener for the contact form submission
-document.getElementById("contactForm").addEventListener("submit", function (event) {
+// Formsprree Contact Form Submission
+var form = document.getElementById("my-form");
+
+async function handleSubmit(event) {
   event.preventDefault();
+  var status = document.getElementById("my-form-status");
+  var data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      status.innerHTML = "Thanks for your submission!";
+      form.reset();
+      resetContactForm();
+      setTimeout(resetStatusMessage, 3000);
+    } else {
+      response.json().then(data => {
+        if (Object.hasOwn(data, 'errors')) {
+          status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+        } else {
+          status.innerHTML = "Oops! There was a problem submitting your form";
+        }
+      });
+    }
+  }).catch(error => {
+    status.innerHTML = "Oops! There was a problem submitting your form";
+  });
+}
 
-  const form = event.target;
-  const formData = new FormData(form);
+form.addEventListener("submit", handleSubmit);
 
-  // Kirim data ke server menggunakan metode AJAX
-  fetch("/submit_form.php", {
-    method: "POST",
-    body: formData
-  })
-    .then(response => response.json())
-    .then(data => {
-      // Tanggapan dari server
-      console.log(data.message);
-      // Tambahkan kode untuk menampilkan pesan sukses atau melakukan tindakan lain yang sesuai
-    })
-    .catch(error => {
-      // Tambahkan kode untuk menampilkan pesan kesalahan jika terjadi masalah saat mengirim data
-      console.error("Error:", error);
-    });
-});
+// Fungsi untuk mereset input form kontak
+function resetContactForm() {
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
+  nameInput.value = "";
+  emailInput.value = "";
+  messageInput.value = "";
+}
+
+// Fungsi untuk mengganti innerHTML pesan status menjadi kosong setelah beberapa detik
+function resetStatusMessage() {
+  const status = document.getElementById("my-form-status");
+  status.innerHTML = "";
+}
