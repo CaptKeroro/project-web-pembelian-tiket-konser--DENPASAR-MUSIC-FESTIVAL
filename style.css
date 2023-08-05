@@ -20,21 +20,18 @@ body {
 
 header {
   height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: #1a1a1a;
   color: #f0f0f0;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: top 0.3s ease;
-}
-
-header.fixed-top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 999;
+  transition: top 0.3s ease;
 }
 
 header .logo img {
@@ -119,7 +116,7 @@ main {
 }
 
 #home .button a:hover {
-  background-color: #ff9f00;
+  background-color: #ff8c00;
 }
 
 #lineup {
@@ -217,7 +214,7 @@ table td button {
 }
 
 table td button:hover {
-  background-color: #f7941e;
+  background-color: #ff8c00;
 }
 
 #about {
@@ -256,6 +253,10 @@ table td button:hover {
   font-family: "Geologica", sans-serif;
 }
 
+#contact button:hover {
+  background-color: #ff8c00;
+}
+
 form {
   max-width: 500px;
   margin: 0 auto;
@@ -278,19 +279,6 @@ form label {
 form input,
 form textarea {
   padding: 0.5rem;
-}
-
-form button {
-  background-color: #ff9f00;
-  color: #f0f0f0;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #f7941e;
 }
 
 .footer {
@@ -338,7 +326,7 @@ form button:hover {
   color: #fff;
   margin: 0 10px;
   display: inline-block;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .social-icon__link:hover {
   transform: translateY(-10px);

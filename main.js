@@ -1,17 +1,26 @@
-const esmScript = document.createElement('script');
-esmScript.type = 'module';
-esmScript.src = 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js';
-document.body.appendChild(esmScript);
-
-const nomoduleScript = document.createElement('script');
-nomoduleScript.src = 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js';
-document.body.appendChild(nomoduleScript);
-
-let prevScrollPos = window.pageYOffset;
-const header = document.querySelector("header");
+let isHeaderVisible = true;
+const header = document.getElementById("header");
 const headerHeight = header.offsetHeight;
+let prevScrollPos = 0;
 
-function toggleHeaderVisibility() {
+// Function to show or hide the header
+function toggleHeader() {
+  // Check if the header is at the top (position fixed) and do nothing
+  if (window.pageYOffset === 0) return;
+
+  if (isHeaderVisible) {
+    // Header is visible, hide it
+    header.style.top = `-${headerHeight}px`;
+  } else {
+    // Header is hidden, show it
+    header.style.top = "0";
+  }
+
+  isHeaderVisible = !isHeaderVisible;
+}
+
+// Event listener to toggle header visibility on scroll
+window.addEventListener("scroll", function () {
   const currentScrollPos = window.pageYOffset;
   const scrollUp = prevScrollPos > currentScrollPos;
 
@@ -24,49 +33,67 @@ function toggleHeaderVisibility() {
   }
 
   prevScrollPos = currentScrollPos;
-}
-
-// Event listener to toggle header visibility on scroll
-window.addEventListener("scroll", toggleHeaderVisibility);
-
-
-// Function to show or hide the header
-function toggleHeader() {
-  if (isHeaderVisible) {
-    // Header is visible, hide it
-    document.querySelector("header").style.top = `-${headerHeight}px`;
-  } else {
-    // Header is hidden, show it
-    document.querySelector("header").style.top = "0";
-  }
-
-  isHeaderVisible = !isHeaderVisible;
-}
+});
 
 // Event listener to show or hide the header on click anywhere on the page
 document.addEventListener("click", function (event) {
   const clickedElement = event.target;
-  const header = document.querySelector("header");
 
+  // Check if the clicked element is inside the header
   if (!header.contains(clickedElement)) {
-    // Clicked element is not inside the header, toggle header visibility
-    toggleHeader();
+    // Check if the clicked element is the buy or send button
+    if (clickedElement.id !== "buy" && clickedElement.id !== "send"
+      && clickedElement.id !== "name" && clickedElement.id !== "email"
+      && clickedElement.id !== "message") {
+      // Clicked element is not inside the header or the buttons, toggle header visibility
+      toggleHeader();
+    }
   }
+
+  // Prevent the event from bubbling up to the window level
+  event.stopPropagation();
 });
 
-// Internal navigation - smooth scroll to target with compensating for header height
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
+// Function to handle smooth scroll to the home section
+function scrollToHome() {
+  const homeSection = document.getElementById("home");
+  const headerOffset = headerHeight + 17; // Adjust this value according to your header height
+  const elementPosition = homeSection.getBoundingClientRect().top;
+  const offsetPosition = elementPosition - headerOffset;
 
-    const target = document.querySelector(this.getAttribute("href"));
-    const headerOffset = headerHeight + 17; // Adjust this value according to your header height
-    const elementPosition = target.getBoundingClientRect().top;
-    const offsetPosition = elementPosition - headerOffset;
-
-    window.scrollBy({
-      top: offsetPosition,
-      behavior: "smooth"
-    });
+  window.scrollBy({
+    top: offsetPosition,
+    behavior: "smooth"
   });
+}
+
+// Event listener for the "Home" link
+const homeLink = document.querySelector('a[href="#home"]');
+homeLink.addEventListener("click", function (e) {
+  e.preventDefault();
+  scrollToHome();
+});
+
+// Event listener for the contact form submission
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const formData = new FormData(form);
+
+  // Kirim data ke server menggunakan metode AJAX
+  fetch("/submit_form.php", {
+    method: "POST",
+    body: formData
+  })
+    .then(response => response.json())
+    .then(data => {
+      // Tanggapan dari server
+      console.log(data.message);
+      // Tambahkan kode untuk menampilkan pesan sukses atau melakukan tindakan lain yang sesuai
+    })
+    .catch(error => {
+      // Tambahkan kode untuk menampilkan pesan kesalahan jika terjadi masalah saat mengirim data
+      console.error("Error:", error);
+    });
 });
